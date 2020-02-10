@@ -19,12 +19,12 @@ public class ChromeTest {
     @BeforeClass
     public static void setupClass() {
         System.out.println("I 'm Here 2 ...");
-      //  WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
     }
 
     @Before
     public void setupTest() {
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+      //  System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless"); // disabling infobars
         options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
@@ -43,7 +43,7 @@ public class ChromeTest {
     @Test
     public void testCheese() throws Exception {
         System.out.println("I 'm Here 2 ...");
-        WebElement queryBox = driver.findElement(By.name("q99"));
+        WebElement queryBox = driver.findElement(By.name("q"));
         queryBox.sendKeys("cheese");
         queryBox.sendKeys(Keys.RETURN);
         Thread.sleep(2000);
