@@ -7,6 +7,7 @@ podTemplate(label: 'java',
         checkout scm
               container("selenium-chrome") {
                             stage('Test') {
+                                sh 'google-chrome --version'
                                 sh './gradlew test'
                             }
                         }
