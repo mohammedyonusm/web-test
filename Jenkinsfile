@@ -5,15 +5,15 @@ podTemplate(label: 'java',
         ]) {
     node("java"){
         checkout scm
+              container("selenium-chrome") {
+                            stage('Test') {
+                                sh './gradlew test'
+                            }
+                        }
                 container("chrome"){
                                     stage('Test') {
                                         sh 'echo java'
                                     }
-                }
-                container("selenium-chrome") {
-                    stage('Test') {
-                        sh './gradlew test'
-                    }
                 }
     }
 }
