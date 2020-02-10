@@ -35,6 +35,7 @@ public class ChromeTest {
 
     @Test
     public void testCheese() throws Exception {
+        System.out.println("I 'm Here 2 ...");
         WebElement queryBox = driver.findElement(By.name("q99"));
         queryBox.sendKeys("cheese");
         queryBox.sendKeys(Keys.RETURN);

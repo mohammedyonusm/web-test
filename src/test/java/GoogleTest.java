@@ -8,6 +8,7 @@ public class GoogleTest {
 
     @Test
     public void checkTitle() {
+        System.out.println("I 'm Here ...");
         WebDriver driver = new FirefoxDriver();
         driver.get("https://www.google.com");
         String title = driver.getTitle();
