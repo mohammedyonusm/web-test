@@ -18,11 +18,12 @@ public class ChromeTest {
     @BeforeClass
     public static void setupClass() {
         System.out.println("I 'm Here 2 ...");
-        WebDriverManager.chromedriver().setup();
+      //  WebDriverManager.chromedriver().setup();
     }
 
     @Before
     public void setupTest() {
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         driver = new ChromeDriver();
         driver.get("http://www.google.com");
     }
