@@ -5,7 +5,7 @@ podTemplate(label: 'java',
         ]) {
     node("java"){
         checkout scm
-              container("selenium-chrome") {
+              container("chrome") {
                             stage('Test') {
                                 sh 'google-chrome --version'
                                 sh 'whereis google-chrome'

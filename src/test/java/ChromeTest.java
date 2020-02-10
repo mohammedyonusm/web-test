@@ -24,11 +24,8 @@ public class ChromeTest {
 
     @Before
     public void setupTest() {
-      //  System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless"); // disabling infobars
-       // options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-       // options.addArguments("--no-sandbox"); // Bypass OS security model
         driver = new ChromeDriver(options);
         driver.get("http://www.google.com");
     }
