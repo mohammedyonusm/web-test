@@ -8,6 +8,7 @@ podTemplate(label: 'java',
               container("selenium-chrome") {
                             stage('Test') {
                                 sh 'google-chrome --version'
+                                sh 'whereis google-chrome'
                                 sh './gradlew test'
                             }
                         }
