@@ -1,7 +1,7 @@
 podTemplate(label: 'java',
         containers: [
                 containerTemplate(name: 'chrome', image: 'openjdk:8-jdk', ttyEnabled: true, command: 'cat'),
-                containerTemplate(name: 'selenium-chrome', image: 'selenium/standalone-chrome:3.14', ttyEnabled: true, command: 'cat')
+                containerTemplate(name: 'selenium-chrome', image: 'atlassianlabs/docker-node-jdk-chrome-firefox:latest', ttyEnabled: true, command: 'cat')
         ]) {
     node("java"){
         checkout scm
