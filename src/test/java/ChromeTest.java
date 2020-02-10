@@ -17,6 +17,7 @@ public class ChromeTest {
 
     @BeforeClass
     public static void setupClass() {
+        System.out.println("I 'm Here 2 ...");
         WebDriverManager.chromedriver().setup();
     }
 
